@@ -1,0 +1,13 @@
+// Intentionally vulnerable exercise input; never executed.
+class UserController {
+    String getUser(java.sql.Connection conn, String name) throws Exception {
+        var rs = conn.createStatement().executeQuery("SELECT * FROM users WHERE name='" + name + "'");
+        rs.next();
+        return "<div>" + rs.getString("bio") + "</div>";
+    }
+    int average(int[] values) {
+        int total = 0;
+        for (int i = 0; i <= values.length; i++) total += values[i];
+        return total / values.length;
+    }
+}

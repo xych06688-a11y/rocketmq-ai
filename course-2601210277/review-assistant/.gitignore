@@ -1,0 +1,4 @@
+target/
+config.local.properties
+logs/
+results/
